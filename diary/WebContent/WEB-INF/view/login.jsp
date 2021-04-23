@@ -13,7 +13,7 @@
 		<form method="post" action="${pageContext.request.contextPath}/login">
 			<div>
 				<div>ID : </div>
-				<div><input type="text" name="memberId" value="goodee@gdu.co.kr"></div>
+				<div><input type="text" name="memberId" value="admin"></div>
 				<div>PW : </div>
 				<div><input type="password" name="memberPw" value="1234"></div>
 				<div><button type="submit">로그인</button></div>
@@ -24,8 +24,12 @@
 	<!-- 로그인 후 -->
 	<c:if test="${sessionMember != null}">
 		<div>${sessionMember.memberId} 님 반갑습니다.</div>
-		<div><a href="${pageContext.request.contextPath}/auth/logout">로그아웃</a></div>
-		<div><a href="/auth/">다이어리</a></div>
+		<div>
+			<a href="${pageContext.request.contextPath}/auth/logout">로그아웃</a>
+			<a href="${pageContext.request.contextPath}/auth/logout">회원정보</a>
+			<a href="${pageContext.request.contextPath}/auth/removeMember">회원탈퇴</a>
+		</div>
+		<div><a href="${pageContext.request.contextPath}/auth/diary">다이어리</a></div>
 	</c:if>
 </body>
 </html>
