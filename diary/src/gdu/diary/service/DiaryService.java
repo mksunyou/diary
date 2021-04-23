@@ -18,6 +18,15 @@ public class DiaryService {
 		Map<String, Object> map = new HashMap<String, Object>();
 		Calendar target = Calendar.getInstance();
 		
+		
+		if(targetYear != null) {
+			target.set(Calendar.YEAR, Integer.parseInt(targetYear));
+		}
+		if(targetMonth != null) { 
+			//13월이 되거나 0이 되면 내년과 전년으로 자동으로 Year가 변함.( ex)21년 12월에서 다음을 누르면 자동으로 22년 1월로 바꿔줌)
+			target.set(Calendar.MONTH, Integer.parseInt(targetMonth));
+		}
+		/*
 		int numTargetMonth = 0;
 		int numTargetYear = 0;
 		
@@ -34,6 +43,7 @@ public class DiaryService {
 			target.set(Calendar.YEAR, numTargetYear);
 			target.set(Calendar.MONTH, numTargetMonth-1);
 		}
+		*/
 		
 		target.set(Calendar.DATE, 1);
 		// 1숫자 앞에 와야할 빈 셀의 개수
@@ -53,7 +63,7 @@ public class DiaryService {
 		
 		//return할 값
 		map.put("targetYear", target.get(Calendar.YEAR));
-		map.put("targetMonth", target.get(Calendar.MONTH)+1);
+		map.put("targetMonth", target.get(Calendar.MONTH));
 		map.put("startBlank", startBlank);
 		map.put("endDay", endDay);
 		map.put("endBlank", endBlank);

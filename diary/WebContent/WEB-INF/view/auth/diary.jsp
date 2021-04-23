@@ -18,7 +18,7 @@
 	
 	<h1>
 		<a href="${pageContext.request.contextPath}/auth/diary?targetYear=${diaryMap.targetYear}&targetMonth=${diaryMap.targetMonth-1}">이전</a>
-		${diaryMap.targetYear}년 ${diaryMap.targetMonth}월
+		${diaryMap.targetYear}년 ${diaryMap.targetMonth+1}월
 		<a href="${pageContext.request.contextPath}/auth/diary?targetYear=${diaryMap.targetYear}&targetMonth=${diaryMap.targetMonth+1}">이후</a>
 	</h1>
 	<table border="1" width="90%">
