@@ -17,6 +17,8 @@
 				<div>PW : </div>
 				<div><input type="password" name="memberPw" value="1234"></div>
 				<div><button type="submit">로그인</button></div>
+				<a href="${pageContext.request.contextPath}/addMember"><button type="button">회원가입</button></a>
+				
 			</div>
 		</form>
 	</c:if>
@@ -26,8 +28,7 @@
 		<div>${sessionMember.memberId} 님 반갑습니다.</div>
 		<div>
 			<a href="${pageContext.request.contextPath}/auth/logout">로그아웃</a>
-			<a href="${pageContext.request.contextPath}/auth/logout">회원정보</a>
-			<a href="${pageContext.request.contextPath}/auth/removeMember">회원탈퇴</a>
+			<a href="${pageContext.request.contextPath}/auth/myAccount">회원정보</a>
 		</div>
 		<div><a href="${pageContext.request.contextPath}/auth/diary">다이어리</a></div>
 	</c:if>

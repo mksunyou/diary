@@ -20,32 +20,5 @@ public class DBUtil {
    }
    
    // 메서드 호출쪽에서 자원을 해제 해야하는데 편하게 해제가능하도록 메서드 제공
-   public void close(Connection conn, PreparedStatement stmt, ResultSet rs) {
-      //생성된 역순으로 해제
-      if(rs != null) {
-         try {
-            rs.close();
-         } catch (Exception e) {
-            e.printStackTrace();
-         }
-      }
-      
-      if(conn != null) {
-         try {
-            conn.close();
-         } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-         }
-      }
-
-      if(stmt != null) {
-         try {
-            stmt.close();
-         } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-         }
-      }
-   }
+   
 }
