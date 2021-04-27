@@ -4,19 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>removeMember</title>
+<title>remonveMember</title>
 </head>
 <body>
-	<form method = "post" action = "${pageContext.request.contextPath}/auth/removeMember">
+	<form method="post" action="${pageContext.request.contextPath}/auth/removeMember">
 		<div>
-			member Pw
+			memberPw:
 		</div>
 		<div>
 			<input type="password" name="memberPw">
 		</div>
-		<div>
-			<button type="submit">회원탈퇴</button>
-		</div>
+		<button type="submit">탈퇴</button>
 	</form>
 </body>
 </html>
